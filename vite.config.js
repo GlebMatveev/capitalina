@@ -11,4 +11,6 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  // for deploying on GitHub Pages in the "capitalina" repository
+  // base: "/capitalina/",
 });
