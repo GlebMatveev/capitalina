@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as _,a as c}from"./index.ab4bfb43.js";const o={},t={class:"draft-docs"},a=c("h1",null,"docs view",-1),n=[a];function r(d,i){return s(),_("div",t,n)}var f=e(o,[["render",r]]);export{f as default};
