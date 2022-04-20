@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as _,a as o}from"./index.ab4bfb43.js";const t={},r={class:"draft-view"},a=o("h1",null,"forms view",-1),c=[a];function n(i,d){return s(),_("div",r,c)}var f=e(t,[["render",n]]);export{f as default};

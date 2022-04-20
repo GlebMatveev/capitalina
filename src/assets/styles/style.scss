@@ -1,0 +1,23 @@
+@import "fonts";
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1173px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@import "blocks/header";
+@import "blocks/top";
+@import "blocks/get-loan";
+@import "blocks/calc";
+@import "blocks/benefits";
+@import "blocks/feedback";
+@import "blocks/questions";
+@import "blocks/footer";

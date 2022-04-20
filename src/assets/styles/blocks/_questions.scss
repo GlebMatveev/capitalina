@@ -1,0 +1,96 @@
+.questions {
+  &__wrap {
+    background: rgb(229,229,229);
+    background: linear-gradient(180deg, rgba(229,229,229,1) 0%, rgba(253,253,254,1) 100%);  
+  }
+  &__container-wrap {
+    background: radial-gradient(158.63% 158.36% at 1.83% 0%, #E68F43 0%, #B1580A 100%);
+    border-radius: 24px;
+  }
+  &__container {
+    padding: 56px 64px;
+    margin-bottom: 124px;
+    background: url(../img/questions/questions-back1.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  &__header {
+    padding-bottom: 6px;
+    font-family: $headerFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 120%;
+    color: #FFFFFF;
+  }
+  &__header-black {
+    color: #282828;
+  }
+  &__text {
+    padding-top: 20px;
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
+    color: #FFFFFF;
+  }
+}
+.accordeon {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  &__item input {
+    display: none;
+  }
+  &__content {
+    display: none;
+  }
+  &__item {
+    padding: 21px 32px;
+    margin-bottom: 8px;
+    background: #FFFFFF;
+    border-radius: 20px;
+  }
+  &__title {
+    font-family: $headerFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #282828;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  &__title:hover {
+    color: darken(#E38B3F, 10%);
+  }
+  &__title::after {
+    content: url(../img/questions/accordeon-closed.svg);
+    float: right;
+  }
+  &__content {
+    padding-top: 21px;
+  }
+  &__item :checked + .accordeon__title {
+    color: #E38B3F;
+  }
+  &__item :checked + .accordeon__title::after {
+    content: url(../img/questions/accordeon-opened.svg);
+  }
+  &__item :checked ~ .accordeon__content {
+    display: block;
+  }
+  &__text {
+    padding-bottom: 24px;
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #282828;
+    opacity: 0.5;
+  }
+  &__text-bold {
+    font-weight: 700;
+  }
+}

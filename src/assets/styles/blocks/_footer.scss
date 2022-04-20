@@ -1,0 +1,58 @@
+.footer {
+  padding: 52px;
+  &__flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+  &__link {
+      text-decoration: none;
+      margin-left: 40px;
+  }
+  &__text {
+      font-family: $textFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 18px;
+      color: #282828;
+  }
+  &__text-negative {
+    color: #FFFFFF;
+  }
+  &__button {
+      background: #282828;
+      margin-left: 40px;
+      text-decoration: none;
+      padding: 16px 24px 15px;
+      border: 1px solid #282828;
+      box-sizing: border-box;
+      border-radius: 10px;
+  }
+  &__button:hover {
+    background: darken(#282828, 10%);
+  }
+  &__line {
+    margin: 0;
+    background: #282828;
+    opacity: 0.13;
+    height: 1px;
+    border: 0;
+  }
+  &__article {
+    padding-top: 40px;
+    font-family: $textFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 135%;
+    color: #282828;
+    opacity: 0.5;
+  }
+  &__link-hidden {
+    text-decoration: none;
+    color: #282828;
+  }
+}

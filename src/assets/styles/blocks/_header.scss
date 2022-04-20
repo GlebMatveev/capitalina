@@ -1,0 +1,39 @@
+.header {
+    background-color:#E68F43;
+    &__back {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    &__flex {
+        backdrop-filter: blur(88px); 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    &__link {
+        text-decoration: none;
+        margin-left: 40px;
+        
+    }
+    &__text {
+        font-family: $textFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        color: #F5F6FA;
+    }
+    &__button {
+        background: #282828;
+        margin-left: 40px;
+        text-decoration: none;
+        padding: 16px 24px 15px;
+        border: 1px solid #282828;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+    &__button:hover {
+        background: darken(#282828, 10%);
+    }
+}

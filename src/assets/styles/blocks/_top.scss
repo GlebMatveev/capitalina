@@ -1,0 +1,50 @@
+.top {
+    background: url(../img/top/top-back.png), linear-gradient(180deg, #E68F43 0%, #B1580A 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    &__wrap {
+        max-width: 520px;
+        padding: 90px 0 522px 0;
+    }
+    &__heading {
+        display: inline-block;
+        font-family: $headerFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 110%;
+        color: #F5F6FA;
+    }
+    &__heading-accented {
+        color: #282828;
+    }
+    &__text {
+        display: inline-block;
+        font-family: $textFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 120%;
+        color: #FFFFFF;
+        margin-top: 16px;
+        margin-bottom: 48px;
+    }
+    &__list {
+        list-style: none;
+        list-style-image: url(../img/top/check.png);
+        font-family: $textFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 180%;
+        color: #FFFFFF;
+        padding-left: 30px;
+    }
+    &__list-item {
+        padding-left: 15px;
+    }
+    @media (max-width:1440px) {
+        background-size: auto auto;
+    }
+}
