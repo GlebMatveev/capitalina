@@ -1,0 +1,53 @@
+.benefits {
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+        background: url(../img/benefits/benefits-back.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    &__heading {
+        font-family: $headerFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 120%;
+        color: #282828;
+    }
+    &__table {
+        border-collapse: collapse;
+        border: 3px solid white;
+    }
+    &__table td {
+        border: 2px dashed grey;
+        padding: 31px;
+    }
+    &__span {
+        font-family: $textFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        color: grey;
+    }
+    &__colorSpan-big {
+        font-family: $headerFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 130%;
+        color: #E68F43;
+    }
+    &__colorSpan {
+        font-family: $headerFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 31px;
+        color: #E68F43;
+    }
+}

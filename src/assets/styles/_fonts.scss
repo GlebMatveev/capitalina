@@ -1,0 +1,48 @@
+// Подключение шрифтов
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('../fonts/TTfirst/TTFirsNeue-Regular.eot');
+    src: local('TT Firs Neue Regular'), local('TTFirsNeue-Regular'),
+        url('../fonts/TTfirst/TTFirsNeue-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTfirst/TTFirsNeue-Regular.woff2') format('woff2'),
+        url('../fonts/TTfirst/TTFirsNeue-Regular.woff') format('woff'),
+        url('../fonts/TTfirst/TTFirsNeue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Firs Neue';
+    src: url('../fonts/TTfirst/TTFirsNeue-DemiBold.eot');
+    src: local('TT Firs Neue DemiBold'), local('TTFirsNeue-DemiBold'),
+        url('../fonts/TTfirst/TTFirsNeue-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTfirst/TTFirsNeue-DemiBold.woff2') format('woff2'),
+        url('../fonts/TTfirst/TTFirsNeue-DemiBold.woff') format('woff'),
+        url('../fonts/TTfirst/TTFirsNeue-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzentica 4F';
+    src: url('../fonts/Akzentica4F/Akzentica4F.eot');
+    src: local('Akzentica 4F'), local('Akzentica4F'),
+        url('../fonts/Akzentica4F/Akzentica4F.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Akzentica4F/Akzentica4F.woff2') format('woff2'),
+        url('../fonts/Akzentica4F/Akzentica4F.woff') format('woff'),
+        url('../fonts/Akzentica4F/Akzentica4F.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzentica 4F';
+    src: url('../fonts/Akzentica4F/Akzentica4F-Bold.eot');
+    src: local('Akzentica 4F Bold'), local('Akzentica4F-Bold'),
+        url('../fonts/Akzentica4F/Akzentica4F-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Akzentica4F/Akzentica4F-Bold.woff2') format('woff2'),
+        url('../fonts/Akzentica4F/Akzentica4F-Bold.woff') format('woff'),
+        url('../fonts/Akzentica4F/Akzentica4F-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

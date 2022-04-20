@@ -1,0 +1,75 @@
+.get-loan {
+    background: rgb(253,253,254);
+    background: linear-gradient(180deg, rgba(253,253,254,1) 27.45%, rgba(229,229,229,1) 100%);
+    
+    &__wrapper {
+        background: url(../img/get-loan/get-loan-back.png);
+        background-position: top;
+        padding: 130px 0 124px 0;
+    }
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+    &__payments {
+        width: 477px;
+    }
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 32px;
+    }
+    &__image-block {
+        background: #EFF0F4;
+        border-radius: 12px;
+        width: 108px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__heading-big {
+        font-family: $headerFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 46px;
+        line-height: 64px;
+        color: #282828;
+    }
+    &__bottom {
+        margin-top: 127px;
+    }
+    &__wrap {
+        padding-top: 29px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 26px;
+    }
+    &__item {
+        background: #FAFAFC;
+        border-radius: 20px;
+        padding: 32px;
+    }
+    &__heading-small {
+        padding: 32px 0 8px 0;
+        font-family: $headerFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        color: #282828;
+    }
+    &__text {
+        font-family: $textFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        display: flex;
+        align-items: center;
+        color: #8A8A8A;
+    }
+}

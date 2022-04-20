@@ -1,125 +1,97 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
+// import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import MainHeader from "@/components/MainHeader.vue";
+import MainFooter from "@/components/MainFooter.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <MainHeader />
   <RouterView />
+  <!-- <RouterView v-slot="{ Component }">
+    <Transition name="fade">
+      <Component :is="Component" />
+    </Transition>
+  </RouterView> -->
+
+  <MainFooter />
 </template>
-
 <style>
-@import "@/assets/base.css";
+.fade-enter-active {
+  transition: 0.5s ease;
+}
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.fade-enter-from {
+  opacity: 0;
+}
 
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("./assets/fonts/TTfirst/TTFirsNeue-Regular.eot");
+  src: local("TT Firs Neue Regular"), local("TTFirsNeue-Regular"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-Regular.woff2") format("woff2"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-Regular.woff") format("woff"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
 }
 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("./assets/fonts/TTfirst/TTFirsNeue-DemiBold.eot");
+  src: local("TT Firs Neue DemiBold"), local("TTFirsNeue-DemiBold"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-DemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-DemiBold.woff2") format("woff2"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-DemiBold.woff") format("woff"),
+    url("./assets/fonts/TTfirst/TTFirsNeue-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+@font-face {
+  font-family: "Akzentica 4F";
+  src: url("./assets/fonts/Akzentica4F/Akzentica4F.eot");
+  src: local("Akzentica 4F"), local("Akzentica4F"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F.woff2") format("woff2"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F.woff") format("woff"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+@font-face {
+  font-family: "Akzentica 4F";
+  src: url("./assets/fonts/Akzentica4F/Akzentica4F-Bold.eot");
+  src: local("Akzentica 4F Bold"), local("Akzentica4F-Bold"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F-Bold.woff") format("woff"),
+    url("./assets/fonts/Akzentica4F/Akzentica4F-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.visually-hidden {
+  position: fixed;
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.container {
+  margin: 0 auto;
+  max-width: 1173px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 </style>
