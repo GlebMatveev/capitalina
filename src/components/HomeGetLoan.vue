@@ -1,5 +1,11 @@
-<script setup>
+<script>
 import HomeCalc from "@/components/HomeCalc.vue";
+
+export default {
+  components: {
+    HomeCalc,
+  },
+};
 </script>
 
 <template>

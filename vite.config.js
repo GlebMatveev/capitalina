@@ -13,4 +13,5 @@ export default defineConfig({
   },
   // for deploying on GitHub Pages in the "capitalina" repository
   base: "/capitalina/dist/",
+  //base: "/",
 });

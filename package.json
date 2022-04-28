@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "moment": "^2.29.3",
     "pinia": "^2.0.13",
     "vue": "^3.2.31",
     "vue-router": "^4.0.14",
@@ -23,7 +24,7 @@
     "prettier": "2.6.2",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
-    "vite": "^2.9.1",
+    "vite": "^2.9.5",
     "webpack": "^5.72.0"
   }
 }
