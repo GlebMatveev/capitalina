@@ -1,8 +1,7 @@
-<script setup>
-// import { RouterLink } from "vue-router";
-</script>
-
 <script>
+import Moment from "moment/moment";
+import "moment/locale/ru";
+
 export default {
   data() {
     return {
@@ -18,21 +17,61 @@ export default {
 
       loanPercent: 1,
       returnAmount: 0,
+
+      dayWords: ["день", "дня", "дней"],
+      dayWord: "",
+
+      dayFrom: "",
+      dayTo: "",
+      returnDate: "",
     };
   },
-  computed: {
+
+  computed: {},
+
+  methods: {
     calcReturnAmount() {
+      // calc return amount
       let loanRate = this.loanPercent / 100;
       let oneDayProfit = Number(this.sumValue) * loanRate;
-      return (this.returnAmount =
-        oneDayProfit * Number(this.termValue) + Number(this.sumValue));
+      this.returnAmount =
+        oneDayProfit * Number(this.termValue) + Number(this.sumValue);
+
+      // calc day declension
+      this.dayWord = this.declOfNum(this.termValue, this.dayWords);
+
+      // calc return date
+      Moment.locale("ru");
+      let nowDate = Moment();
+      let outDate = nowDate
+        .add(Number(this.termValue), "days")
+        .format("DD MMMM YYYY");
+      this.returnDate = outDate;
     },
+
+    // day declension method
+    declOfNum(n, titles) {
+      return titles[
+        n % 10 == 1 && n % 100 != 11
+          ? 0
+          : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20)
+          ? 1
+          : 2
+      ];
+    },
+
+    calcReturnDate() {},
   },
+
   mounted() {
-    this.calcReturnAmount;
+    this.calcReturnDate();
+    // returnAmount data first init
+    this.calcReturnAmount();
 
-    // this.updatedValues;
+    this.dayFrom = this.declOfNum(this.termMin, this.dayWords);
+    this.dayTo = this.declOfNum(this.termMax, this.dayWords);
 
+    // progressbar styles
     for (let e of document.querySelectorAll(
       'input[type="range"].slider-progress'
     )) {
@@ -76,9 +115,10 @@ export default {
     <hr class="calc__line" />
     <div class="calc__slider-text-wrapper calc__slider-text-wrapper_text-gray">
       <p>
-        На срок: <span class="calc__slider-day-span">{{ termValue }} день</span>
+        На срок:
+        <span class="calc__slider-day-span">{{ termValue }} {{ dayWord }}</span>
       </p>
-      <p>6 апреля 2022</p>
+      <p>{{ returnDate }}</p>
     </div>
     <input
       class="calc__slider slider-progress"
@@ -91,8 +131,8 @@ export default {
       @input="calcReturnAmount"
     />
     <div class="calc__slider-text-wrapper">
-      <p>{{ termMin }} дней</p>
-      <p>{{ termMax }} дней</p>
+      <p>{{ termMin }} {{ dayFrom }}</p>
+      <p>{{ termMax }} {{ dayTo }}</p>
     </div>
     <div class="calc__wrap">
       <div class="calc__item">

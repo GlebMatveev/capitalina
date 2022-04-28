@@ -95,7 +95,9 @@ import { RouterLink } from "vue-router";
 
 <style>
 .footer {
-  padding: 52px;
+  /* padding: 52px; */
+  background: #ffffff;
+  padding-bottom: 52px;
 }
 
 .footer__flex {

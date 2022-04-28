@@ -1,7 +1,15 @@
+<script>
+import FormsHeader from "@/components/FormsHeader.vue";
+
+export default {
+  components: {
+    FormsHeader,
+  },
+};
+</script>
+
 <template>
-  <div class="draft-view">
-    <h1>forms view</h1>
-  </div>
+  <FormsHeader />
 </template>
 
 <script></script>
