@@ -1,6 +1,6 @@
 # capitalina
 
-> **commercial development**
+> **commercial**
 
 Draft project. Temporarily frozen.
 
